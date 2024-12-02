@@ -8,12 +8,13 @@ class Boate(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.labelPergunta.setText(f"Qual a sua idade?")
-        # Conectar o botão à função que realiza a soma
+        # Conectar o botão à função
         self.ui.btnVerificar.clicked.connect(self.ehMaior)
     
 
     def ehMaior(self):
         try:
+            
             idade = int(self.ui.inputDigite.text())
 
             if idade >= 18:
@@ -22,12 +23,9 @@ class Boate(QMainWindow):
                 self.ui.labelPergunta.setText('Saia fora!')
             elif idade <= 10 or idade > 70:
                 self.ui.labelPergunta.setText('Mentira...')
+        
         except ValueError:
                 self.ui.labelPergunta.setText('Use numeros...')
-
-
-
-
 
 
 if __name__ == "__main__":
