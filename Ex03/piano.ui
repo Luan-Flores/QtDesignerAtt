@@ -381,7 +381,7 @@ QPushButton:checked {
 </string>
     </property>
     <property name="text">
-     <string>On/Off</string>
+     <string>Desligado</string>
     </property>
     <property name="checkable">
      <bool>true</bool>

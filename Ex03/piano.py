@@ -179,5 +179,5 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.notaText.setText(_translate("MainWindow", "-"))
-        self.ligarBtn.setText(_translate("MainWindow", "On/Off"))
+        self.ligarBtn.setText(_translate("MainWindow", "Desligado"))
         self.label_2.setText(_translate("MainWindow", "Piano Digital"))

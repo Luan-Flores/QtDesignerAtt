@@ -43,30 +43,30 @@ class Piano(QMainWindow):
         self.ui.LaSustenido.clicked.connect(lambda: self.tocar('A#'))
         self.ui.Si.clicked.connect(lambda: self.tocar('B'))
         
-        # Reproduzir som para a nota Do
+        # funcao para mostrar a nota tocada 
     def tocar(self, nota):
-        # Exibir a nota apenas se o botão estiver ligado
+        # exibe a nota apenas se o botao estiver ligado
         if self.ligarBtn.isChecked():
             self.ui.notaText.setText(nota)
-            # QSound.play("DoSom.wav")
+            
         else:
-            self.ui.notaText.setText("")  # Limpa o texto se o botão estiver desligado
+            self.ui.notaText.setText("")  # limpar o texto se o botão estiver desligado
 
     def atualizar_estado(self):
-        # Atualiza o estado do botão de liga/desliga
+        # atualizar o estado do botão de liga/desliga
         if self.ligarBtn.isChecked():
             self.ligarBtn.setText("Ligado")
         else:
             self.ligarBtn.setText("Desligado")
-            self.ui.notaText.setText("")  # Limpa o texto da nota ao desligar
+            self.ui.notaText.setText("")  # limpar o texto da nota ao desligar
 
     def tocar_nota(self, arquivo_som):
-        # Reproduzir som usando QSound
+        # Reproduzir som usando QSound (se o botão estiver ligado)
         if self.ligarBtn.isChecked():
             QSound.play(arquivo_som)
-            # QSound.play("DoSom.wav")
+            
         else:
-            self.ui.notaText.setText("")  # Limpa o texto se o botão estiver desligado
+            self.ui.notaText.setText("")  # limpar o texto se o botão estiver desligado
 
 
 
